@@ -17,8 +17,7 @@
 > PS C:>  Get-AzureADUser -All $true  
 > PS C:>  Get-AzureADUser -ObjectId jdoe@company.com  
 > PS C:>  Get-AzureADUser -All $true | ?{$_.Displayname -match "admin"}  
-> PS C:>  AzureADUser -ObjectId test@defcorphq.onmicrosoft.com | fl
-*
+> PS C:>  AzureADUser -ObjectId test@company.com | fl *
 
 #### All user who are synced from on premise
 > PS C:> Get-AzureADUser -All $true |?{$_.OnPremisesSecurityIdentifier -ne $null}
