@@ -7,6 +7,7 @@
 
 
 ## AzureAD Module
+- https://docs.microsoft.com/en-us/powershell/module/azuread/?view=azureadps-2.0
 #### Connect using AzureAD
 > PS C:> Connect-AzureAD  
 
@@ -53,8 +54,14 @@
 #### List registered users for all devices
 > PS C:> Get-AzureADDevice -All $true | Get-AzureADDeviceRegisteredUser
 
+#### List registered owners of all the devices
+> PS C:> Get-AzureADDevice -All $true | Get-AzureADDeviceRegisteredOwner
 
+#### List devices owned by a user
+> PS C:> Get-AzureADUserOwnedDevice -ObjectId jdoe@company.com
 
+#### List devices registered by a user
+> PS C:> Get-AzureADUserRegisteredDevice -ObjectId jdoe@company.com
 
 
 
@@ -82,6 +89,9 @@
 
 #### Get resource groups within your subscription
 > PS C:> Get-AzResourceGroup
+
+#### List custom roles
+> PS C:> Get-AzRoleDefinition | FT Name, IsCustom
 
 
 
