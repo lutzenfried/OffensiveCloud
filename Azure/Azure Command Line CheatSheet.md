@@ -81,7 +81,9 @@
 ``` Get-AzureADUser -SearchString 'test' | Get-AzureADUserMembership Get-AzureADUserMembership -ObjectId jdoe@company.com```
 
 #### Get all roles
-``` Get-AzureADDirectoryRole```
+``` 
+Get-AzureADDirectoryRole
+```
 
 #### Get role definition
 ``` Get-AzureADMSRoleDefinition -Filter "displayName eq 'Global Administrator'"```
