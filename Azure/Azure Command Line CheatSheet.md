@@ -147,7 +147,6 @@ Get-AzureADMSRoleAssignment -Filter "PrincipalId eq '57ada729-a581-4d6f-9f16-3fe
 ```
 
 RoleDefinitionId  
-> -----------------  
 > d6c631b5-76af-4147-8b79-eab0b187861d  
 > 05e8fe6f-05cb-4cac-bc26-a97175381949
 
@@ -267,7 +266,7 @@ The Az PowerShell module is a set of cmdlets for managing Azure resources direct
 Connect-AzAccount 
 ```
 
-===================================  
+> -----------------  	
 
 ```
 $creds = Get-Credential
@@ -277,7 +276,7 @@ $creds = Get-Credential
 Connect-AzAccount -Credential $creds
 ```
 
-===================================  
+> -----------------  
 
 ```
 $passwd = ConvertTo-SecureString "Password123" -AsPlainText -Force
