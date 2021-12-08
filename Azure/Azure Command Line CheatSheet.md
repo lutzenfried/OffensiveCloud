@@ -12,17 +12,27 @@
 ```Azure Active Directory PowerShell module version for Graph for Azure AD administrative tasks such as user management, domain management and for configuring single sign-on. The cmdlets listed here are different from the MSOnline cmdlets which are part of Azure Active Directory PowerShell version 1.0.```  
 
 #### Connect using AzureAD
-``` Connect-AzureAD```  
+``` 
+Connect-AzureAD
+```  
 
 #### Get the current session state
-```  Get-AzureADCurrentSessionInfo```
+```
+Get-AzureADCurrentSessionInfo
+```
 
 #### Get details of the current tenant
-``` Get-AzureADTenantDetail```
+``` 
+Get-AzureADTenantDetail
+```
 
 #### Enumerate users
-```  Get-AzureADUser -All $true```  
-```  Get-AzureADUser -ObjectId jdoe@company.com```  
+```
+Get-AzureADUser -All $true
+```
+```
+Get-AzureADUser -ObjectId jdoe@company.com
+```
 
 #### Search for user based on string in first char of DisplayName or UserPrincipalName
 ```  Get-AzureADUser -SearchString "admin"```
