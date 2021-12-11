@@ -89,7 +89,7 @@ MATCH (a:AADRole) RETURN *
 
 #### Get user role inheritance from group
 ```
-
+MATCH (a:AADUser)-[r1]->(b:AADGroup)-[r2]->(c:AADRole) WHERE a.name = 'jdoe' RETURN *
 ```
 
 #### Show the Azure AD role Application Developer
