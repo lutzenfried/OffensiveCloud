@@ -56,7 +56,7 @@ MATCH (a:Tenant) RETURN *
 MATCH (t:AADRole)-[r]-(a) return *
 ```
 
-### Check role for specific user
+#### Check role for specific user
 ```
 MATCH (a:AADRole)-[r]-(b:AADUser) WHERE b.userPrincipalName = 'admin@defcorphq.onmicrosoft.com' RETURN *
 ```
