@@ -126,8 +126,7 @@ export default {
         },
         {
           title: "Show all user with Application or Cloud Application administrator role assigned",
-          cypher: "MATCH (a:AADRole)-[r]-(t:AADUser) WHERE (a.name = 'Application Administrator' OR a.name =
-'Cloud Application Administrator') RETURN *",
+          cypher: "MATCH (a:AADRole)-[r]-(t:AADUser) WHERE (a.name = 'Application Administrator' OR a.name = 'Cloud Application Administrator') RETURN *",
         },
         {
           title: "Show all relationships for Virtual Machines",
