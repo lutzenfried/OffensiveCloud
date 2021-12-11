@@ -2,6 +2,8 @@
 
 Updated version of CyperQueries file used within [Stormspotter](https://github.com/Azure/Stormspotter/) tool for Azure AD graph representation.  
 
-To update available queries within Stormspotter GUI replace the original **C:/Tools/Stormspotter/frontend/src/components/QueryView.vue** with this file.
+To update available queries within Stormspotter GUI replace the original JavaScript file :
 
-- Original file : https://github.com/Azure/Stormspotter/blob/4efb43a447cbe6dd3c4b80ea884641986218d023/frontend/src/components/QueryView.vue
+**/home/lutzenfried/Tools/Stormspotter/frontend/dist/spa/js/2.1ec371a8.js** with this file.
+
+- Original file : https://github.com/Azure/Stormspotter/blob/main/frontend/dist/spa/js/2.1ec371a8.js
