@@ -133,7 +133,7 @@ MATCH (a)-[r]-(t:VirtualMachine) WHERE r.roleName = 'Contributor' RETURN *
 MATCH (a:AADUser)-[r]-(b:AADApplication) RETURN *
 ```
 
-#### Show all RBAC relationships for specific user containing 'admin' with *userPrincipalName* attribute
+#### Show all RBAC relationships for specific user containing 'admin' within *userPrincipalName* attribute
 ```
 MATCH (a:AADUser)-[r]-(t) WHERE EXISTS(r.roleName) AND a.userPrincipalName CONTAINS 'admin' RETURN *
 ```
