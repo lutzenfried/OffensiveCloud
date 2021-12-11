@@ -33,7 +33,7 @@ MATCH (b:AADUser)-[r]-(c:AzureResource) WHERE b.name = 'testuser' RETURN *
 
 #### Group membership for specific user
 ```
-MATCH (a:AADUser)-[r]-(b:AADGroup) WHERE a.userPrincipalName = 'LoisJCamacho@defcorphq.onmicrosoft.com' RETURN *
+MATCH (a:AADUser)-[r]-(b:AADGroup) WHERE a.userPrincipalName = 'jdoe@company.com' RETURN *
 ```
 
 #### Show all KeyVault
