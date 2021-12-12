@@ -38,7 +38,7 @@ Get-AzureADUser -ObjectId jdoe@company.com
 ```
 Get-AzureADMSAuthorizationPolicy
 ```
-**Interesting settings :**
+**Interesting settings :**  
 *- AllowedToCreateApps: True*  
 *- AllowedToCreateSecurityGroups: True*  
 *- AllowedToReadOtherUsers: True*  
