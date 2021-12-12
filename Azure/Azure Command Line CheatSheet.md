@@ -39,9 +39,9 @@ Get-AzureADUser -ObjectId jdoe@company.com
 Get-AzureADMSAuthorizationPolicy
 ```
 **Interesting settings :**
-*- AllowedToCreateApps: True*
-*- AllowedToCreateSecurityGroups: True*
-*- AllowedToReadOtherUsers: True*
+*- AllowedToCreateApps: True*  
+*- AllowedToCreateSecurityGroups: True*  
+*- AllowedToReadOtherUsers: True*  
 
 #### Search for user based on string in first char of DisplayName or UserPrincipalName
 ```
