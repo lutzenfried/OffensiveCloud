@@ -34,6 +34,15 @@ Get-AzureADUser -All $true
 Get-AzureADUser -ObjectId jdoe@company.com
 ```
 
+#### Show authorization policy, which represents a policy that can control Azure Active Directory authorization settings.
+```
+Get-AzureADMSAuthorizationPolicy
+```
+**Interesting settings :**
+*- AllowedToCreateApps: True*
+*- AllowedToCreateSecurityGroups: True*
+*- AllowedToReadOtherUsers: True*
+
 #### Search for user based on string in first char of DisplayName or UserPrincipalName
 ```
 Get-AzureADUser -SearchString "admin"
