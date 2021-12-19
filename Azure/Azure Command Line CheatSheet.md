@@ -34,15 +34,6 @@ Get-AzureADUser -All $true
 Get-AzureADUser -ObjectId jdoe@company.com
 ```
 
-#### Show authorization policy, which represents a policy that can control Azure Active Directory authorization settings.
-```
-Get-AzureADMSAuthorizationPolicy
-```
-**Interesting settings :**  
-*- AllowedToCreateApps: True*  
-*- AllowedToCreateSecurityGroups: True*  
-*- AllowedToReadOtherUsers: True*  
-
 #### Search for user based on string in first char of DisplayName or UserPrincipalName
 ```
 Get-AzureADUser -SearchString "admin"
@@ -147,6 +138,11 @@ Get-AzureADDirectoryRole
 #### Get role definition
 ```
 Get-AzureADMSRoleDefinition -Filter "displayName eq 'Global Administrator'"
+```
+
+#### Get custom role definition
+```
+Get-AzureADMSRoleDefinition | ?{$_.IsBuiltIn -match "False"}
 ```
 
 #### List role assign to specific group
@@ -299,6 +295,11 @@ $creds = New-Object System.Management.Automation.PSCredential ("jdoe@company.com
 Connect-AzureAD -Credential $creds
 ```
 
+#### Connect using an access token
+```
+Connect-AzAccount -AccountId jdoe@company.com -AccessToken eyJ0eXA
+```
+
 #### Get current context
 ```
 Get-AzContext
@@ -378,6 +379,11 @@ Get-AzAccessToken
 #### Use access token
 ```
 Connect-AzAccount -AccountId jdoe@company.com -AccessToken eyJ0eXAFegerfiojEF423dez21dzfsFZa443
+```
+
+##### Using graph api token
+```
+Connect-AzAccount -AccessToken $Token -GraphAccessToken $graphtoken -AccountId '62e44426-5c46-4e3c-8a89-f461d5d586f2'
 ```
 
 #### Request for specific access token
@@ -481,3 +487,9 @@ az ad group member list -g "VM Admins" --query "[].[displayName]" -o table
 az ad group member check --group "VM Admins" --member-id b71d21f6-8e09-4a9d-932a-cb73df519787
 ```
 
+#### List available app service visible to the user
+```
+az webapp list
+```
+
+#### 
