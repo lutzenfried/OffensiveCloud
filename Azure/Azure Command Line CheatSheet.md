@@ -442,9 +442,19 @@ The AZ CLI can be installed on multiple platforms, it is also available directly
 az login
 ```
 
+#### If access to a computer / VM : Check if a user is logged in to Az cli
+```
+az ad signed-in-user show
+```
+
 #### You can configure az cli to set some default behaviour (location, resource group ...)
 ```
 az configure
+```
+
+#### List owned object for a signed in user
+```
+az ad signed-in-user list-owned-objects
 ```
 
 #### Find popular commands
