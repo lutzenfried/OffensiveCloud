@@ -48,8 +48,15 @@ gcloud projects list
 gcloud config set project <projectName>
 ```
 
+#### List Storage from a configured account
+```
+gcloud alpha storage ls
+```
 
-
+#### List storage publicly accessible
+```
+gcloud alpha storage ls gs://cdn_test/
+```
 
 
 
