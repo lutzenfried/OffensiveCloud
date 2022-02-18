@@ -166,3 +166,6 @@ gcloud alpha storage ls gs://cdn_test/
 gcloud container clusters list
 ```
 
+## Resources
+#### GCloud large cheatsheet
+- https://gist.github.com/pydevops/cffbd3c694d599c6ca18342d3625af97
