@@ -32,7 +32,7 @@ gcloud config list
 gcloud config set account jdoe@company.com
 ```
 
-## Gcloud Recon
+## Gcloud Recon misc
 #### List organizations
 ```
 gcloud organizations list
@@ -58,13 +58,23 @@ gcloud config set project <projectName>
 gcloud iam service-accounts list
 ```
 
+#### Gives a list of all APIs that are enabled in project
+```
+gcloud services list
+```
+
+#### Get source code repos available to user
+```
+gcloud source repos list
+```
+
 #### List of all users associated with specific project ID (Get the IAM policy for a project)
 This will display the roles associated with each IAM member.  
 ```
 gcloud projects get-iam-policy project-test-1234
 ```
 
-## Gcloud network recon
+## GCloud Network Recon
 This would allow attacker for example to enumerate Firewall rules, compute instance networking/interface or GCP services such as GCP Direct Peering. The goal of direct peering is to link the internal network of an organization to a GCP Direct Peering location.
 
 #### List networks for Compute Engine
@@ -87,14 +97,63 @@ gcloud compute routes list
 gcloud compute networks peerings list
 ```
 
+#### List firewall rules
+```
+gcloud compute firewal-rules list
+```
+
 #### Get the effective firewall of a Compute Engine network
 ```
 gcloud compute networks get-effective-firewalls <ComputeNetworkName>
 ```
 
+## GCloud Compute Recon
+#### List the compute instance
+```
+gcloud compute instances list
+gcloud compute instances describe <InstanceName> --zone us-east1-d
+```
+
+#### List disk used by compute instance
+```
+gcloud compute disks list
+gcloud compute disks describe <DiskName> --zone us-east1-d
+```
+
+#### List compute snapshots
+```
+gcloud compute snapshots list
+gcloud compute snapshots describe <SnapshotName>
+```
+
+#### List backed up AMI  image
+```
+gcloud compute images list
+gcloud compute images describe <ImageName>
+```
+
+#### Get Shell access on compute instance
+```
+gcloud beta compute ssh --zone "<Region>" "<InstanceName>" --project "<ProjectName>"
+```
+
+## GCloud Storage Recon
 #### List Storage from a configured account
 ```
+gsutil ls
 gcloud alpha storage ls
+```
+
+#### List specific bucket recursively
+```
+gcloud alpha storage list --recursive gs://<BucketName>
+gsutil ls -r gs://<BucketName>
+```
+
+#### Copy object from bucket
+```
+gcloud alpha storage gs://bucketId/iteam ./
+gsutil cp gs://bucketId/item ./
 ```
 
 #### List storage publicly accessible
@@ -102,7 +161,10 @@ gcloud alpha storage ls
 gcloud alpha storage ls gs://cdn_test/
 ```
 
-
+## GCloud Containers Recon
+```
+gcloud container clusters list
+```
 
 
 
