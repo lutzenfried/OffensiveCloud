@@ -64,6 +64,34 @@ This will display the roles associated with each IAM member.
 gcloud projects get-iam-policy project-test-1234
 ```
 
+## Gcloud network recon
+This would allow attacker for example to enumerate Firewall rules, compute instance networking/interface or GCP services such as GCP Direct Peering. The goal of direct peering is to link the internal network of an organization to a GCP Direct Peering location.
+
+#### List networks for Compute Engine
+```
+gcloud compute networks list
+```
+
+#### Describe specific compute network
+```
+gcloud compute networks describe <ComputeNetworkName>
+```
+
+#### List route used by compute instances
+```
+gcloud compute routes list
+```
+
+##### List network for Compute Engine peering
+```
+gcloud compute networks peerings list
+```
+
+#### Get the effective firewall of a Compute Engine network
+```
+gcloud compute networks get-effective-firewalls <ComputeNetworkName>
+```
+
 #### List Storage from a configured account
 ```
 gcloud alpha storage ls
