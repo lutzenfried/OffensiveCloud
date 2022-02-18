@@ -166,9 +166,3 @@ gcloud alpha storage ls gs://cdn_test/
 gcloud container clusters list
 ```
 
-
-
-
-
-```
-```
