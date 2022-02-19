@@ -17,6 +17,13 @@ gcloud auth login
 gcloud auth activate-service-account --key-file ./creds.json
 ```
 
+#### Service account impersonation
+```
+gcloud iam service-accounts list
+gcloud compute instances list --impersonate-service-account storage@service-test-001-iam.gserviceaccount.com
+
+```
+
 #### List available accounts
 ```
 gcloud auth list
