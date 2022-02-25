@@ -174,6 +174,27 @@ gcloud alpha storage ls gs://cdn_test/
 gcloud container clusters list
 ```
 
+## Cloud Key Management service
+
+### List the global keyrings available
+```
+gcloud kms keyrings list --location global
+```
+
+### List the keys inside a keyring
+```
+gcloud kms keys list --keyring [KEYRING NAME] --location global
+```
+
+### Decrypt a file using one of your keys
+```
+gcloud kms decrypt --ciphertext-file=[INFILE] \
+    --plaintext-file=[OUTFILE] \
+    --key [KEY] \
+    --keyring [KEYRING] \
+    --location global
+```
+
 ## Resources
 ### GCloud large cheatsheet
 - https://gist.github.com/pydevops/cffbd3c694d599c6ca18342d3625af97
