@@ -45,7 +45,7 @@ gcloud config set account jdoe@company.com
 gcloud organizations list
 ```
 
-### List projects
+### List projects the current user have access
 ```
 gcloud projects list
 ```
@@ -155,6 +155,11 @@ gcloud alpha storage ls
 ```
 gcloud alpha storage list --recursive gs://<BucketName>
 gsutil ls -r gs://<BucketName>
+```
+
+### List project in specific project
+```
+gcloud storage ls --poject PROJECTNAME
 ```
 
 ### Copy object from bucket
