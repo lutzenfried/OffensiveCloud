@@ -65,6 +65,11 @@ gcloud config set project <projectName>
 gcloud iam service-accounts list
 ```
 
+### List keys for specific service account
+```
+gcloud iam service-accounts keys list --iam-account svc-acc@projectName.iam.gserviceaccount.com
+```
+
 ### Gives a list of all APIs that are enabled in project
 ```
 gcloud services list
