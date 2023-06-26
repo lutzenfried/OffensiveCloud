@@ -12,6 +12,11 @@ gcloud init
 gcloud auth login
 ```
 
+### Show debug info / HTTP log
+```
+gcloud projects list --log-http
+```
+
 ### Service account login
 ```
 gcloud auth activate-service-account --key-file ./creds.json
@@ -45,6 +50,11 @@ gcloud config set account jdoe@company.com
 gcloud organizations list
 ```
 
+### List organization policy
+```
+gcloud organizations get-iam-policy <ORGA ID>
+```
+
 ### List projects the current user have access
 ```
 gcloud projects list
@@ -68,6 +78,35 @@ gcloud iam service-accounts list
 ### List keys for specific service account
 ```
 gcloud iam service-accounts keys list --iam-account svc-acc@projectName.iam.gserviceaccount.com
+```
+
+### List permissions for current user at project level
+```
+gcloud projects get-iam-policy <project-id>
+```
+This is assuming, of course, that the IAM permissions are assigned to the users at the project level. You may also want to use get-ancestors-iam-policy, which includes project AND inherited roles from the folder and org levels:
+```
+gcloud projects get-ancestors-iam-policy <project-id>
+```
+
+### List permissions to specific user at project level
+```
+gcloud projects get-iam-policy <project-id> --flatten="bindings[].members" --filter="bindings.members=user:USERNAME@company.com" --format="value(bindings.role)"
+```
+
+### List permission on resource level (compute instance)
+```
+gcloud compute instances get-iam-policy instanceName --zone us-central1-b 
+```
+
+### Listing permissions for service account
+```
+gcloud beta asset search-all-iam-policies --scope=organizations/123 --query="policy:456@cloudservices.gserviceaccount.com" | egrep "role:|resource:|gserviceaccount"
+```
+
+### Describe role permissions
+```
+gcloud iam roles describe [ROLEName]
 ```
 
 ### Gives a list of all APIs that are enabled in project
