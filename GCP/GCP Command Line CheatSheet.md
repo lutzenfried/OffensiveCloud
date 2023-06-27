@@ -109,6 +109,11 @@ gcloud beta asset search-all-iam-policies --scope=organizations/123 --query="pol
 gcloud iam roles describe [ROLEName]
 ```
 
+### List permissions in custom role
+```
+gcloud iam roles describe [rolename] --project <projectID>
+```
+
 ### Gives a list of all APIs that are enabled in project
 ```
 gcloud services list
