@@ -109,6 +109,16 @@ gcloud beta asset search-all-iam-policies --scope=organizations/123 --query="pol
 gcloud iam roles describe [ROLEName]
 ```
 
+### Setting role permission to a user
+```
+gcloud projects add-iam-policy-binding [project-id] --member='user:[user-email]' --role='roles/owner'
+```
+
+### Setting role permission to a service account
+```
+gcloud projects add-iam-policy-binding [project-id] --member='serviceAccount:[sa-email]' --role='roles/editor'
+```
+
 ### List permissions in custom role
 ```
 gcloud iam roles describe [rolename] --project <projectID>
