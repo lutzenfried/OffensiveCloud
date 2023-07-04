@@ -17,6 +17,11 @@ gcloud auth login
 gcloud projects list --log-http
 ```
 
+### Listing current config
+```
+gcloud config list
+```
+
 ### Service account login
 ```
 gcloud auth activate-service-account --key-file ./creds.json
@@ -26,7 +31,6 @@ gcloud auth activate-service-account --key-file ./creds.json
 ```
 gcloud iam service-accounts list
 gcloud compute instances list --impersonate-service-account storage@service-test-001-iam.gserviceaccount.com
-
 ```
 
 ### List available accounts
@@ -78,6 +82,11 @@ gcloud iam service-accounts list
 ### List keys for specific service account
 ```
 gcloud iam service-accounts keys list --iam-account svc-acc@projectName.iam.gserviceaccount.com
+```
+
+### List permissions for specific service account
+```
+gcloud iam service-accounts get-iam-policy svc.acc@projectName.iam.gserviceaccount.com
 ```
 
 ### List permissions for current user at project level
