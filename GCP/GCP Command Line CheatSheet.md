@@ -17,6 +17,11 @@ gcloud auth login
 gcloud projects list --log-http
 ```
 
+### Listing projects using access token
+```
+gcloud projects list --access-token-file=accesstoken.json
+```
+
 ### Listing current config
 ```
 gcloud config list
@@ -141,6 +146,17 @@ gcloud services list
 ### Get source code repos available to user
 ```
 gcloud source repos list
+```
+
+### Creating a cloud function with attached service account
+```
+gcloud functions deploy [my-fun] --timeout 539 --trigger-http --source [function-source] --runtime python37 --entry-point hello_world
+--service-account [service-account-email]
+```
+
+### Running previously created cloud function
+```
+gcloud functions call function-name --data '{}'
 ```
 
 ### List of all users associated with specific project ID (Get the IAM policy for a project)
