@@ -30,6 +30,7 @@ gcloud config list
 ### Service account login
 ```
 gcloud auth activate-service-account --key-file ./creds.json
+gcloud auth activate-service-account --project=<projectid> --key-file=filename.json
 ```
 
 ### Service account impersonation
