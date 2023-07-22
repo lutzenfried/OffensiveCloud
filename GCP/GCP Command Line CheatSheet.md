@@ -155,6 +155,11 @@ gcloud functions deploy [my-fun] --timeout 539 --trigger-http --source [function
 --service-account [service-account-email]
 ```
 
+### Updating cloud function code
+```
+gcloud functions deploy <FunctionName> --timeout 539 --source ./function-source --runtime python39
+```
+
 ### Running previously created cloud function
 ```
 gcloud functions call function-name --data '{}'
