@@ -44,6 +44,12 @@ Get-AzureADUser -SearchString "admin"
 Get-AzureADUser -All $true |?{$_.Displayname -match "admin"}
 ```
 
+#### Listing roles assigned to an application (Microsoft Graph API and others) 
+```
+$app = Get-AzureADServicePrincipal -Searchstring "Microsoft Graph"
+$app.AppRoles
+```
+
 #### Search attributes for all users that contain specific string
 ```
 Get-AzureADUser -All $true |%{$Properties = $_;$Properties.PSObject.Properties.Name | % {if ($Properties.$_ -match 'password'){"$($Properties.UserPrincipalName) - $_ - $($Properties.$_)"}}}
