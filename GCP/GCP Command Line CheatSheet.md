@@ -263,6 +263,17 @@ gsutil cp gs://bucketId/item ./
 gcloud alpha storage ls gs://cdn_test/
 ```
 
+## Google Secret Manager
+Listing secret within a project
+```
+gcloud secrets list
+```
+
+Listing specific secret versions
+```
+gcloud secrets versions access --secret SECRETID
+```
+
 ## GCloud Containers Recon
 ### List clusters
 ```
