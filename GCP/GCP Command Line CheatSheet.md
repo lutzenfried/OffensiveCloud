@@ -39,6 +39,11 @@ gcloud iam service-accounts list
 gcloud compute instances list --impersonate-service-account storage@service-test-001-iam.gserviceaccount.com
 ```
 
+### Retrieve access token for specified service account (using roles/iam.serviceAccountTokenCreator)
+```
+gcloud auth print-access-token --impersonate-service-aacount admin-sa@prod-project-123.iam.gserviceaccount.com
+```
+
 ### List available accounts
 ```
 gcloud auth list
