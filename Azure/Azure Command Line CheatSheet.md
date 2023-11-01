@@ -508,4 +508,7 @@ az ad group member check --group "VM Admins" --member-id b71d21f6-8e09-4a9d-932a
 az webapp list
 ```
 
-#### 
+#### List all public IPs in use
+```
+az network publip-ip list --o table
+```
